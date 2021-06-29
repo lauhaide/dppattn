@@ -89,14 +89,13 @@ python translate.py -gpu 0 -batch_size 50 -beam_size 5 \
 ```
 
 Note: 
-<ol>
-<li> Film and Company no ```-length_penalty``` is used (alpha=0). </li>
-<li> For Multinews, no ```-block_ngram_repeat``` is used, instead ```-stepwise_penalty -coverage_penalty summary -beta 5``` is used.</li>
-<li> WikiCatSum: MAXDECLEN=200 for brnn models, MAXDECLEN=600 for transformer models.</li>
-<li> MultiNews: MAXDECLEN=300 and ```-min_length 200``` </li>
-<li> ```-dectemp 0.6``` for CTF+DPP. </li>
-</ol>
 
+
+- Film and Company no ```-length_penalty``` is used (alpha=0).  
+- For Multinews, no ```-block_ngram_repeat``` is used, instead ```-stepwise_penalty -coverage_penalty summary -beta 5``` is used.  
+- WikiCatSum: MAXDECLEN=200 for brnn models, MAXDECLEN=600 for transformer models.  
+- MultiNews: MAXDECLEN=300 and ```-min_length 200```  
+- ```-dectemp 0.6``` for CTF+DPP.  
 
 
 The following is an example command for greedy decoding, no repetition constraints.
